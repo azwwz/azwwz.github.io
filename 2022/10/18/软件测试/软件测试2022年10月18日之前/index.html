@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>软件测试 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="软件测试">
+    <meta name="description" content="2022年10月18日 对之前的汇总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试">
+<meta property="og:url" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2022年10月18日 对之前的汇总">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927111917988.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927111947640.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927100132877.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927100627617.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927101853693.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927195521784.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927195532664.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927195543703.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220928100430760.png">
+<meta property="og:image" content="http://example.com/image-20220928101240006.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220928101700460.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220928103812176.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220928103910861.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lpaGFuZ1I=,size_16,color_FFFFFF,t_70.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/8984415c4616fe79f75ca4002085f885.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/20cf27f8eb67a543476a4b20fb48399d.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/7e9f6d0ed71774659cbce8f2ea6d6a4d.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220929131136973.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20221011093646856.png">
+<meta property="og:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/2022%E5%B9%B410%E6%9C%8812%E6%97%A5.png">
+<meta property="article:published_time" content="2022-10-18T00:58:03.000Z">
+<meta property="article:modified_time" content="2022-10-18T01:17:45.425Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="软件测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/image-20220927111917988.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">John Doe</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">软件测试</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">软件测试</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-10-18T00:58:03.000Z" itemprop="datePublished" class="page-time">
+  2022-10-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2022%E5%B9%B49%E6%9C%8827%E6%97%A5"><span class="post-toc-number">1.</span> <span class="post-toc-text">2022年9月27日</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8B%9B%E8%81%98"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">招聘</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BB%99tomcat%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">给tomcat配置环境变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">如何部署网站</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E6%B2%A1%E6%9C%89%E7%9B%91%E5%90%AC8080%E7%AB%AF%E5%8F%A3"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">问题没有监听8080端口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%AD%A5%E9%AA%A4%E5%B0%B1%E6%98%AF"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">步骤就是</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9C%A8linux%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-sql%E6%96%87%E4%BB%B6"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">在linux中如何导入.sql文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BF%9B%E5%85%A5mysql%E4%B8%AD%E5%AF%BC%E5%85%A5"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">进入mysql中导入</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8shell%E5%91%BD%E4%BB%A4%E5%AF%BC%E5%85%A5%EF%BC%8C%E5%AF%BC%E5%87%BAsql%E6%96%87%E4%BB%B6"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">使用shell命令导入，导出sql文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9C%A8markdown%E6%96%87%E4%BB%B6%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8linux%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%80%8E%E4%B9%88%E8%AE%BE%E7%BD%AE"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">在markdown文件代码块中使用linux的代码，怎么设置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mysql%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">mysql安装步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#chmod-%E5%92%8C-chown-%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">chmod 和 chown 的用法和区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85mysql%E6%8A%A5%E9%94%99FATAL-ERROR-Could-not-find-x2F-bin-x2F-my-print-defaults%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">安装mysql报错FATAL ERROR: Could not find .&#x2F;bin&#x2F;my_print_defaults的解决办法</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2022%E5%B9%B49%E6%9C%8828%E6%97%A5"><span class="post-toc-number">2.</span> <span class="post-toc-text">2022年9月28日</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E7%9A%84%E6%97%B6%E5%80%99tomcat%E7%9A%84war%E5%8C%85%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%8E%8B%EF%BC%8C%E6%9C%89%E6%97%B6%E5%80%99%E5%8F%88%E4%B8%8D%E4%BC%9A"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">为什么有的时候tomcat的war包会自动解压，有时候又不会</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E4%BD%86%E6%98%AF%E6%98%BE%E7%A4%BA404"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">打开网页但是显示404</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#linux-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8Dip%E5%9C%B0%E5%9D%80"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">linux 如何查看当前ip地址</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vb%E5%90%AF%E5%8A%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%8A%A5%E9%94%99"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">vb启动虚拟机报错</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%B2%A1%E6%9C%89IP%E5%9C%B0%E5%9D%80"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">虚拟机没有IP地址</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MySQL-%E5%AE%89%E8%A3%85%E7%9A%84-pid-%E5%92%8C-socket%E9%97%AE%E9%A2%98"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">MySQL 安装的 pid 和 socket问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2022%E5%B9%B49%E6%9C%8829%E6%97%A5"><span class="post-toc-number">3.</span> <span class="post-toc-text">2022年9月29日</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vb%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">vb网络配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AD%90%E7%B1%BB%E8%A6%86%E5%86%99%E5%90%8E%E8%B0%83%E7%94%A8%E5%86%8D%E8%B0%83%E7%94%A8%E7%9A%84%E8%A7%84%E5%88%99"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">子类覆写后调用再调用的规则</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%86%E8%A7%A3%E8%87%AA%E5%B7%B1%E7%9A%84%E6%80%9D%E7%BB%B4"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">了解自己的思维</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2022%E5%B9%B410%E6%9C%8811%E6%97%A5"><span class="post-toc-number">4.</span> <span class="post-toc-text">2022年10月11日</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%8D%87%E7%BA%A7%E8%B4%A6%E5%8F%B7"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">坚果云升级账号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%86%99%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">写测试用例</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-软件测试/软件测试2022年10月18日之前"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">软件测试</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-10-18 08:58:03" datetime="2022-10-18T00:58:03.000Z"  itemprop="datePublished">2022-10-18</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="2022年9月27日"><a href="#2022年9月27日" class="headerlink" title="2022年9月27日"></a>2022年9月27日</h1><h2 id="招聘"><a href="#招聘" class="headerlink" title="招聘"></a>招聘</h2><h2 id="给tomcat配置环境变量"><a href="#给tomcat配置环境变量" class="headerlink" title="给tomcat配置环境变量"></a>给tomcat配置环境变量</h2><p>和mysql一样</p>
+<h2 id="如何部署网站"><a href="#如何部署网站" class="headerlink" title="如何部署网站"></a>如何部署网站</h2><h3 id="问题没有监听8080端口"><a href="#问题没有监听8080端口" class="headerlink" title="问题没有监听8080端口"></a>问题没有监听8080端口</h3><p>原因是，JAVA_HOME路径配置错误</p>
+<p>错误可以从 tomcat路径下面的 logs&#x2F;cataline.out 查看 命令用cat命令</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927111917988.png" alt="image-20220927111917988" title="">
+                </div>
+                <div class="image-caption">image-20220927111917988</div>
+            </figure>
+
+
+
+<p>查看自己访问的端口号</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927111947640.png" alt="image-20220927111947640" title="">
+                </div>
+                <div class="image-caption">image-20220927111947640</div>
+            </figure>
+
+<p>开启后的8080 是外网访问 8005 是内网 3306 数据库的</p>
+<h3 id="步骤就是"><a href="#步骤就是" class="headerlink" title="步骤就是"></a>步骤就是</h3><p>把war包放入webapps中，然后启动tomcat 通过<code>端口号加:8080/资源名</code>访问</p>
+<h2 id="在linux中如何导入-sql文件"><a href="#在linux中如何导入-sql文件" class="headerlink" title="在linux中如何导入.sql文件"></a>在linux中如何导入.sql文件</h2><h3 id="进入mysql中导入"><a href="#进入mysql中导入" class="headerlink" title="进入mysql中导入"></a>进入mysql中导入</h3><ol>
+<li>首先看看。sql文件的内容中是否有创建数据库和切换数据库的代码</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927100132877.png" alt="image-20220927100132877" title="">
+                </div>
+                <div class="image-caption">image-20220927100132877</div>
+            </figure>
+
+<ol start="2">
+<li><p>如果有直接就 正常登录然后使用命令</p>
+<blockquote>
+<p>&#x2F;&#x2F; 执行source命令,可用pwd查询sql文件路径 </p>
+<p>source &#x2F;mysql&#x2F;file.sql  </p>
+</blockquote>
+</li>
+<li><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927100627617.png" alt="image-20220927100627617" title="">
+                </div>
+                <div class="image-caption">image-20220927100627617</div>
+            </figure></li>
+</ol>
+<h3 id="使用shell命令导入，导出sql文件"><a href="#使用shell命令导入，导出sql文件" class="headerlink" title="使用shell命令导入，导出sql文件"></a>使用shell命令导入，导出sql文件</h3><p>source命令，是一行一行执行的，过慢，不适合大数据</p>
+<ol>
+<li><p>导出数据库</p>
+<p>直接使用命令：</p>
+<p><code>mysqldump -u root -p abc &gt;abc.sql</code></p>
+<p>然后回车输入密码就可以了；</p>
+<p><code>mysqldump -u 数据库链接用户名 -p  目标数据库 &gt; 存储的文件名</code></p>
+<p>文件会导出到当前目录下</p>
+</li>
+<li><p>导入数据库（sql文件）</p>
+<p><code>mysql -u 用户名 -p  数据库名 &lt; 数据库名.sql</code></p>
+<p><code>mysql -u abc -p abc &lt; abc.sql</code></p>
+<blockquote>
+<p>这里的 数据库名 可以没有，就是上述的 sql文件中有创建数据库和切换数据库的代码</p>
+</blockquote>
+<p>注意sql文件必须在当前目录下，如果不在当前目录下需要在&lt; 之后加上具体sql文件路径</p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927101853693.png" alt="image-20220927101853693" title="">
+                </div>
+                <div class="image-caption">image-20220927101853693</div>
+            </figure>
+
+<h2 id="在markdown文件代码块中使用linux的代码，怎么设置"><a href="#在markdown文件代码块中使用linux的代码，怎么设置" class="headerlink" title="在markdown文件代码块中使用linux的代码，怎么设置"></a>在markdown文件代码块中使用linux的代码，怎么设置</h2><p>无</p>
+<h2 id="mysql安装步骤"><a href="#mysql安装步骤" class="headerlink" title="mysql安装步骤"></a>mysql安装步骤</h2><p>创建用户组和用户</p>
+<p>解压安装包</p>
+<p>设置文件权限（不赋予权限试试）</p>
+<p>添加my.cnf配置文件</p>
+<p>配置my.cnf文件</p>
+<p>添加my.cnf中的使用到的文件夹</p>
+<p>安装mysql</p>
+<p>添加mysql到开机初始化启动项中</p>
+<p>添加到服务中</p>
+<p>启动mysql</p>
+<p>修改密码</p>
+<h3 id="chmod-和-chown-的用法和区别"><a href="#chmod-和-chown-的用法和区别" class="headerlink" title="chmod 和 chown 的用法和区别"></a>chmod 和 chown 的用法和区别</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39814534/article/details/87172909">chomd和chown的作用及用法区分</a></p>
+<p>详解：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44295125/article/details/110467460">Linux中chown和chmod的用法</a></p>
+<ul>
+<li>总的来说只有root用户还有文件的所有者可以该文件的对于自己和其他人的权限</li>
+<li>为了避免文件执行时不可执行，文件读写时不可读写的问题，需要按需设置文件的权限</li>
+</ul>
+<h2 id="安装mysql报错FATAL-ERROR-Could-not-find-x2F-bin-x2F-my-print-defaults的解决办法"><a href="#安装mysql报错FATAL-ERROR-Could-not-find-x2F-bin-x2F-my-print-defaults的解决办法" class="headerlink" title="安装mysql报错FATAL ERROR: Could not find .&#x2F;bin&#x2F;my_print_defaults的解决办法"></a>安装mysql报错FATAL ERROR: Could not find .&#x2F;bin&#x2F;my_print_defaults的解决办法</h2><p>对mysql数据库初始化过程中，会有如下报错信息：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927195521784.png" alt="image-20220927195521784" title="">
+                </div>
+                <div class="image-caption">image-20220927195521784</div>
+            </figure>
+
+<p>按照报错信息，去mysql安装目录的bin目下查找是否有_print_defaults，在第一列的第七行有发现这个文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927195532664.png" alt="image-20220927195532664" title="">
+                </div>
+                <div class="image-caption">image-20220927195532664</div>
+            </figure>
+
+<p>看来其实不是没有这个文件，不是这个问题。</p>
+<p>认真查看报错信息，可注意到那个路径是相对路径，是以mysql的安装目录为起始。</p>
+<p>而初始化则是进去初始化脚本目录里运行脚本，而在这个目录下不会有.&#x2F;bin&#x2F;my_print_defaults的。</p>
+<p><strong>所以回到安装目录以相对路径去执行初始化脚本</strong>。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220927195543703.png" alt="image-20220927195543703" title="">
+                </div>
+                <div class="image-caption">image-20220927195543703</div>
+            </figure>
+
+<p>OK！初始化成功</p>
+<h1 id="2022年9月28日"><a href="#2022年9月28日" class="headerlink" title="2022年9月28日"></a>2022年9月28日</h1><h2 id="为什么有的时候tomcat的war包会自动解压，有时候又不会"><a href="#为什么有的时候tomcat的war包会自动解压，有时候又不会" class="headerlink" title="为什么有的时候tomcat的war包会自动解压，有时候又不会"></a>为什么有的时候tomcat的war包会自动解压，有时候又不会</h2><p>我试过重新启动tomcat但是依然不行</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220928100430760.png" alt="image-20220928100430760" title="">
+                </div>
+                <div class="image-caption">image-20220928100430760</div>
+            </figure>
+
+<ol>
+<li><p>检查配置文件</p>
+<ul>
+<li>在conf&#x2F;server.xml 中</li>
+</ul>
+<p><img src="/image-20220928101240006.png" alt="image-20220928101240006"></p>
+<ul>
+<li><p>unpackWARs：自动解压</p>
+</li>
+<li><p>AutoDeploy：服务器不需要重启就可以解压</p>
+</li>
+</ul>
+</li>
+<li><p>权限问题，当前用户是否有创建文件夹的权限</p>
+<ul>
+<li>切换到root用户</li>
+</ul>
+</li>
+</ol>
+<p>总结： 是我传成sql文件了，本来是可以自动解压的。。。。。。。。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220928101700460.png" alt="image-20220928101700460" title="">
+                </div>
+                <div class="image-caption">image-20220928101700460</div>
+            </figure>
+
+<h2 id="打开网页但是显示404"><a href="#打开网页但是显示404" class="headerlink" title="打开网页但是显示404"></a>打开网页但是显示404</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220928103812176.png" alt="image-20220928103812176" title="">
+                </div>
+                <div class="image-caption">image-20220928103812176</div>
+            </figure>
+
+<p>配置文件是</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220928103910861.png" alt="image-20220928103910861" title="">
+                </div>
+                <div class="image-caption">image-20220928103910861</div>
+            </figure>
+
+<p>按照配置文件弄好了，我用别的war包可以用，但是这个搜车网的还是不可用</p>
+<p>结果： 顾润说是mysql的版本不匹配，比赛时用官方给的，是匹配的，不会出现这种问题，就不纠结了</p>
+<h2 id="linux-如何查看当前ip地址"><a href="#linux-如何查看当前ip地址" class="headerlink" title="linux 如何查看当前ip地址"></a>linux 如何查看当前ip地址</h2><h2 id="vb启动虚拟机报错"><a href="#vb启动虚拟机报错" class="headerlink" title="vb启动虚拟机报错"></a>vb启动虚拟机报错</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lpaGFuZ1I=,size_16,color_FFFFFF,t_70.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>把网卡改成上 面一样，高级的可以不弄</p>
+<h2 id="虚拟机没有IP地址"><a href="#虚拟机没有IP地址" class="headerlink" title="虚拟机没有IP地址"></a>虚拟机没有IP地址</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/szw906689771/article/details/121681774">csdn</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="8984415c4616fe79f75ca4002085f885.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<ul>
+<li><p>发现ens33 没有inet 这个属性，那么就没法通过IP地址连接虚拟机</p>
+</li>
+<li><p>接着来查看ens33网卡的配置：vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33 注意vi后面加空格</p>
+<pre><code>  vi是Linux内置的文本编辑器命令 打开文件的意思
+</code></pre>
+</li>
+<li><p>从配置清单中可以发现 CentOS 7 默认是不启动网卡的（ONBOOT&#x3D;no）。</p>
+<pre><code>  把这一项改为YES（ONBOOT=yes）
+</code></pre>
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="20cf27f8eb67a543476a4b20fb48399d.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<ul>
+<li><p>然后按 Esc 退出 再出入命令 :wq 再按Enter即可 （备注 :wq 是保存然后退出的意思 后面会专门讲下vi）</p>
+</li>
+<li><p>然后重启网络服务： sudo service network restart</p>
+</li>
+<li><p>然后我们再输入 ip addr 命令</p>
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="7e9f6d0ed71774659cbce8f2ea6d6a4d.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h2 id="MySQL-安装的-pid-和-socket问题"><a href="#MySQL-安装的-pid-和-socket问题" class="headerlink" title="MySQL 安装的 pid 和 socket问题"></a>MySQL 安装的 pid 和 socket问题</h2><h1 id="2022年9月29日"><a href="#2022年9月29日" class="headerlink" title="2022年9月29日"></a>2022年9月29日</h1><h2 id="vb网络配置"><a href="#vb网络配置" class="headerlink" title="vb网络配置"></a>vb网络配置</h2><ol>
+<li><p>ip addr 查看没有ens33 只有enp0s3 是可以的，网卡名字不一样（10.啥的不是ip）</p>
+</li>
+<li><p>同样 vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-enp0s3 </p>
+<p>把ONBOT的值改成yes</p>
+<p>然后重启网络服务 ，sudo service network restart</p>
+</li>
+<li><p>若发现ONBOT已将是 yes ，2就不用再做了</p>
+</li>
+<li><p>（好像只用第四步） 改网络设置(高级有时也不需要改)，如图</p>
+<pre><code>  &lt;img src=&quot;image-20220929101314107.png&quot; alt=&quot;image-20220929101314107&quot; style=&quot;zoom: 80%;&quot; /&gt;
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>有时候新建的虚拟机不能用桥接打开，报网络错误</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20220929131136973.png" alt="image-20220929131136973" title="">
+                </div>
+                <div class="image-caption">image-20220929131136973</div>
+            </figure>
+
+<p>把地址改成第一个，这个进去后，之后再改回来就可以了</p>
+</blockquote>
+<h2 id="子类覆写后调用再调用的规则"><a href="#子类覆写后调用再调用的规则" class="headerlink" title="子类覆写后调用再调用的规则"></a>子类覆写后调用再调用的规则</h2><ul>
+<li>子类在初始化时，父类会先于子类初始化，而父类构造器中调用的方法又是子类覆写的方法，从而<strong>导致了父类在初始化过程中使用了错误的子类初始化数据</strong></li>
+</ul>
+<h2 id="了解自己的思维"><a href="#了解自己的思维" class="headerlink" title="了解自己的思维"></a>了解自己的思维</h2><p>一些自己思维的常识与代码逻辑有相通之处</p>
+<h1 id="2022年10月11日"><a href="#2022年10月11日" class="headerlink" title="2022年10月11日"></a>2022年10月11日</h1><h2 id="坚果云升级账号"><a href="#坚果云升级账号" class="headerlink" title="坚果云升级账号"></a>坚果云升级账号</h2><p>升级账号 :no_good_man:大咩</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="image-20221011093646856.png" alt="image-20221011093646856" title="">
+                </div>
+                <div class="image-caption">image-20221011093646856</div>
+            </figure>
+
+<p>首先，免费版没有空间限制，但是每个月可以上传1G</p>
+<p>假设免费版用到的空间为8G</p>
+<p>专业版开年费有30G的空间，每月增加1G（只有年费才有），也就是42G（12个月后）</p>
+<p>专业版年费到期后，空间为免费版用到的流量，加上每月扩容的流量，也就是8+12 </p>
+<p>那么，多余的问价你要么删除，要么继续开通，要么在会员到期之前，全部下载下来</p>
+<p>所以，用它来同步照片，同步大文件啥的，不合适，有百度网盘，就可以，坚果云毕竟是同步盘</p>
+<p>总的来说，像这样，写博客，偶尔粘贴几个图片，用到office办公，文件共享之类的，每月1g，免费的同步，企业级的数据安全（比自己的nas用的硬盘好一点，我的垃圾硬盘，哈哈），我能用到天荒地老:joy:</p>
+<h2 id="写测试用例"><a href="#写测试用例" class="headerlink" title="写测试用例"></a>写测试用例</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="2022年10月12日.png" alt="2022年10月12日" title="">
+                </div>
+                <div class="image-caption">2022年10月12日</div>
+            </figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2022-10-18T01:17:45.425Z" itemprop="dateUpdated">2022-10-18 09:17:45</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://example.com">
+            <img src="/img/avatar.jpg" alt="John Doe">
+            John Doe
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/&title=《软件测试》 — Hexo&pic=http://example.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/&title=《软件测试》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《软件测试》 — Hexo&url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/&via=http://example.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E5%92%8C%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">白盒和性能测试</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2022/10/17/hexo/hexo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">hexo的安装和安装遇到的问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>John Doe &copy; 2015 - 2022</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/&title=《软件测试》 — Hexo&pic=http://example.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/&title=《软件测试》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《软件测试》 — Hexo&url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/&via=http://example.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://example.com/2022/10/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952022%E5%B9%B410%E6%9C%8818%E6%97%A5%E4%B9%8B%E5%89%8D/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
