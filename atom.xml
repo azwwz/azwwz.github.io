@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-21T09:37:02.770Z</updated>
+  <updated>2022-10-22T03:47:54.534Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件测试考点</title>
+    <link href="http://example.com/2022/10/22/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E8%80%83%E7%82%B9/"/>
+    <id>http://example.com/2022/10/22/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E8%80%83%E7%82%B9/</id>
+    <published>2022-10-22T03:39:37.000Z</published>
+    <updated>2022-10-22T03:47:54.534Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>1）语句覆盖法、2）判定覆盖法、3）条件覆盖法、4）判定条件覆盖法、5）条件组合覆盖法、6）路径覆盖法、7）基本路径覆盖法、8）JUnit基础注解、9）JUnit assert断言方法、10）JUnit assertThat一般匹配符断言、11）JUnit assertThat字符串相关匹配符断言、12）JUnit assertThat数值相关匹配符断言、13）JUnit assertThat集合相关匹配符断言、14）JUnit参数化设置、15）JUnit测试套件、16）JUnit测试优先级顺序、17）JUnit TestRunner使用、18）JUnit内置Rule中TestName使用、19）JUnit内置Rule中TemporaryFolder使用、20）JUnit内置Rule中ExternalResource使用、21）JUnit测试private方法。</p><h2 id="测试文档"><a href="#测试文档" class="headerlink" title="测试文档"></a>测试文档</h2><p>1）编写目的、2）项目背景、3）测试目的、4）测试参考文档、5）测试范围、6）测试提交文档。7）软件配置、8）硬件配置、9）人力资源分配、10）整体测试计划设计、11）相关风险、12）项目组成员、13）整体测试实施情况、14）测试结论</p><h2 id="测试用例、BUG"><a href="#测试用例、BUG" class="headerlink" title="测试用例、BUG"></a>测试用例、BUG</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2><p>1、自动化测试功能点选取范围</p><p>1）用户登录、2）用户退出、3）个人信息、4）部门管理、5）人员管理、6）资产类别、7）品牌、8）取得方式、9）供应商、10）存放地点、11）设备用途、12）报废方式、13）资产申购、14）资产申购审批、15）资产入库、16）资产信息维护、17）资产借还、18）资产转移、19）资产维修、20）资产报废、21）资产报废审批、22）资产盘点、23）资产查询统计</p><p>2、Selenium设计方法选取范围</p><p>1）浏览器基本操作（如打开浏览器、输入地址、网页最大化等）、2）Selenium元素定位方法：id定位、3）Selenium元素定位方法：name定位、4）Selenium元素定位方法：xpath定位、5）Selenium元素定位方法：css_selector定位、6）Selenium元素定位方法：link_text定位、7）Selenium元素定位方法：partial_link_text定位、8）Selenium元素定位方法：class_name定位、9）Selenium元素定位方法：tag_name定位、10）Selenium复数元素定位方法、11）Selenium之鼠标模拟操作、12）Selenium之键盘模拟操作、13）Selenium之时间等待处理、14）Selenium之sumbit()方法使用、15）Selenium之页面中下拉框的处理、16）Selenium之操作下拉滚动条方法、17）Selenium之窗口切换、18）Selenium之页面元素属性删除、19）Selenium之文件上传处理、20）Selenium之页面截图操作、21）Selenium之alert弹出框处理、22）unittest自动化测试框架、23）读取csv文件、24）数据驱动、25）Page Object模式</p><h2 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h2><h3 id="1、性能测试功能点选取范围"><a href="#1、性能测试功能点选取范围" class="headerlink" title="1、性能测试功能点选取范围"></a>1、性能测试功能点选取范围</h3><p>1）用户登录、2）用户退出、3）个人信息、4）部门管理、5）人员管理、6）资产类别、7）品牌、8）取得方式、9）供应商、10）存放地点、11）设备用途、12）报废方式、13）资产申购、14）资产申购审批、15）资产入库、16）资产信息维护、17）资产借还、18）资产转移、19）资产维修、20）资产报废、21）资产报废审批、22）资产盘点、23）资产查询统计</p><p>2、JMeter相关参数选取范围</p><p><strong>线程组选取范围：</strong></p><p>1）线程组、2）setUp线程组、3）tearDown线程组</p><p><strong>取样器选取范围：</strong></p><p>1）HTTP请求、2）调试取样器、3）FTP请求、4）Java请求</p><p><strong>逻辑控制器选取范围：</strong></p><p>1）事务控制器、2）循环控制器、3）交替控制器、4）仅一次控制器、5）随机控制器、6）随机顺序控制器、7）简单控制器</p><p><strong>断言选取范围：</strong></p><p>1）响应断言、2）JSON断言、3）大小断言</p><p><strong>定时器选取范围：</strong></p><p>1）固定定时器、2）统一随机定时器、3）高斯随机定时器、4）泊松随机定时器、5）同步定时器</p><p><strong>配置元件选取范围：</strong></p><p>1）CSV 数据文件设置、2）HTTP信息头管理器、3）HTTP Cookie管理器、4）HTTP缓存管理器、5）HTTP请求默认值、6）HTTP授权管理器、7）FTP默认请求、8）Java默认请求、9）随机变量</p><p><strong>监听器选取范围：</strong></p><p>1）察看结果树、2）汇总报告、3）聚合报告、4）汇总图、5）断言结果、6）图形结果、7）响应时间图</p><p><strong>函数助手选取范围：</strong></p><p>1）CSVRead、2）Random、3）RandomDate、4）RandomString、5）time</p><h3 id="JMeter运行选取范围："><a href="#JMeter运行选取范围：" class="headerlink" title="JMeter运行选取范围："></a>JMeter运行选取范围：</h3><p>1）GUI运行、2）非GUI运行</p><p><strong>在取样器错误后要执行的动作可设置：</strong></p><p>继续，启动下一进程循环，停止线程，停止测试，立即停止测试。</p><p><strong>场景配置虚拟用户数可设置：</strong></p><p>1到100之间。</p><p><strong>Ramp-Up****时间（秒）可设置：</strong></p><p>1到60之间。</p><p><strong>循环次数可设置：</strong></p><p>永远，自定义次数。</p><p><strong>调度器可设置：</strong></p><p>启用，不启用。</p><p><strong>调度器启用-持续时间可设置：</strong></p><p>1min到30min之间。</p><p><strong>调度器启用-启动延迟可设置：</strong></p><p>无延迟，自定义时间。</p><p><strong>测试结果数据截图取1到22单独图：</strong></p><p>1）Test and Report information、2）<a href="https://en.wikipedia.org/wiki/Apdex">APDEX (Application Performance Index)</a>、3）Requests Summary、4）Statistics、5）Errors、6）Top 5 Errors by sampler、7） Response Times Over Time、8）Response Time Percentiles Over Time (successful responses)、9）Active Threads Over Time、10）Bytes Throughput Over Time、11）Latencies Over Time、12）Connect Time Over Time、13）Hits Per Second、14）Codes Per Second、15）Transactions Per Second、16）Total Transactions Per Second、17） Response Time Vs Request、18）Latency Vs Request、19）Response Time Percentiles、20）Response Time Overview、21）Time Vs Threads、22）Response Time Distribution</p><h3 id="3、LoadRunner相关参数选取范围"><a href="#3、LoadRunner相关参数选取范围" class="headerlink" title="3、LoadRunner相关参数选取范围"></a>3、LoadRunner相关参数选取范围</h3><p><strong>参数类型选取范围：</strong></p><p>1）Date&#x2F;Time、2）File、3）Group Name、4）Iteration Number、5）Load Generator Name、6）Random Number、7）Table、Unique Number、8）User Defined Function、9）Vuser ID、10）XML</p><p><strong>数据分配方法选取范围：</strong></p><p>1）Sequential、2）Random、3）Unique</p><p><strong>数据更新方式选取范围：</strong></p><p>1）Each occurrence、2）Each iteration、3）Once</p><p><strong>场景配置虚拟用户数可设置：</strong></p><p>1到50之间。</p><p><strong>持续时长可设置：</strong></p><p>5min到20min之间，以及所有vuser运行完成。</p><p><strong>递增虚拟用户数可设置：</strong></p><p>1到20之间。</p><p><strong>递增时长设置：</strong></p><p>5s到30s之间。</p><p><strong>递减虚拟用户数可设置：</strong></p><p>1到20之间 ，以及运行完成结束。</p><p><strong>递减时长可设置：</strong></p><p>1s到60s之间，以及运行完成结束。</p><p><strong>测试结果数据截图取1到23单独或组合图：</strong></p><p>1）Summary Report、2）Running Vusers、3）Hit per Second、4）Throughput、5）Transaction Summary、6）Average Transaction Response Time、7）Vuser Summary、8）Rendezvous、9）Error Statistics (by Description)、10）Errors per Second (by Description)、11）Transactions per Second、12）Total Transactions per Second、13）Transaction Performance Summary、14）Transaction Response Time Under Load、15）Transaction Response Time (Percentile)、16）Transaction Response Time (Distribution)、17）Transaction Response Time By Location、18）Web Page Diagnostics、Page Component Breakdown、19）Page Download Time Breakdown、20）Time to First Buffer Breakdown、21）Downloaded Component Size (KB)、22）HTTP Status Code Summary、23）HTTP Responses per Second</p><h3 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h3><p>1）PostMan Get接口请求、2)PostMan Post接口请求、3）PostMan环境变量、4）PostMan全局变量、5）PostMan测试断言、6）PostMan测试驱动、7）PostMan设置Cookie</p>]]></content>
+    
+    
+    <summary type="html">赛题库中的考点</summary>
+    
+    
+    
+    <category term="软件测试" scheme="http://example.com/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="软件测试" scheme="http://example.com/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="软件测试考点" scheme="http://example.com/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E8%80%83%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>单元测试</title>
