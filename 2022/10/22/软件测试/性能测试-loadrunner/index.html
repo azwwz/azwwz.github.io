@@ -241,7 +241,7 @@
 <meta property="og:image" content="http://example.com/2022/10/22/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-loadrunner/03LoadRunner_211.png">
 <meta property="og:image" content="http://example.com/2022/10/22/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-loadrunner/03LoadRunner_212.png">
 <meta property="article:published_time" content="2022-10-22T04:07:48.000Z">
-<meta property="article:modified_time" content="2022-10-24T01:28:53.171Z">
+<meta property="article:modified_time" content="2022-10-24T09:57:07.693Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="软件测试">
 <meta property="article:tag" content="性能测试">
@@ -386,6 +386,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#loadrunner-%E4%BB%8B%E7%BB%8D"><span class="post-toc-number">1.</span> <span class="post-toc-text">loadrunner 介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#loadrunner%E7%89%B9%E6%80%A7"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">loadrunner特性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#loadrnnergo%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">loadrnnergo工作原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#loadrunner%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">loadrunner工作过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#loadrunner%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">loadrunner测试步骤</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#VuGen"><span class="post-toc-number">2.</span> <span class="post-toc-text">VuGen</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">脚本开发过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%96%B0%E5%BB%BA%E8%84%9A%E6%9C%AC"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">新建脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E5%8D%8F%E8%AE%AE"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">如何选择协议</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BD%95%E5%88%B6%E5%8E%9F%E7%90%86"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">录制原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%84%9A%E6%9C%AC%E5%BD%95%E5%88%B6"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">脚本录制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BD%95%E5%88%B6%E9%80%89%E9%A1%B9"><span class="post-toc-number">2.5.1.</span> <span class="post-toc-text">录制选项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B7%A5%E5%85%B7%E6%A0%8F"><span class="post-toc-number">2.5.2.</span> <span class="post-toc-text">工具栏</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%A3%E7%90%86%E5%BD%95%E5%88%B6"><span class="post-toc-number">2.5.3.</span> <span class="post-toc-text">代理录制</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9E%E6%94%BE%E8%84%9A%E6%9C%AC"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">回放脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E8%AE%BE%E7%BD%AE"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">运行时设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BF%AD%E4%BB%A3%E6%AC%A1%E6%95%B0"><span class="post-toc-number">2.7.1.</span> <span class="post-toc-text">迭代次数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94"><span class="post-toc-number">2.7.2.</span> <span class="post-toc-text">时间间隔</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%97%A5%E5%BF%97"><span class="post-toc-number">2.7.3.</span> <span class="post-toc-text">日志</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%80%9D%E8%80%83%E6%97%B6%E9%97%B4"><span class="post-toc-number">2.7.4.</span> <span class="post-toc-text">思考时间</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9E%E6%94%BE%E9%80%89%E9%A1%B9"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">回放选项</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%80%9D%E8%80%83%E6%97%B6%E9%97%B4-1"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">思考时间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A3%80%E6%9F%A5%E7%82%B9"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">检查点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%9B%86%E5%90%88%E7%82%B9"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">集合点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">事务</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-软件测试/性能测试-loadrunner"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -422,7 +429,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_02</div>
             </figure>
-<figure class="image-bubble">
+<h1 id="loadrunner-介绍"><a href="#loadrunner-介绍" class="headerlink" title="loadrunner 介绍"></a>loadrunner 介绍</h1><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_03.png" alt="LoadRunner_03" title="">
@@ -436,7 +443,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_04</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="loadrunner特性"><a href="#loadrunner特性" class="headerlink" title="loadrunner特性"></a>loadrunner特性</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_05.png" alt="LoadRunner_05" title="">
@@ -450,7 +457,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_06</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="loadrnnergo工作原理"><a href="#loadrnnergo工作原理" class="headerlink" title="loadrnnergo工作原理"></a>loadrnnergo工作原理</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_07.png" alt="LoadRunner_07" title="">
@@ -485,7 +492,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_11</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="loadrunner工作过程"><a href="#loadrunner工作过程" class="headerlink" title="loadrunner工作过程"></a>loadrunner工作过程</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_12.png" alt="LoadRunner_12" title="">
@@ -506,7 +513,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_14</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="loadrunner测试步骤"><a href="#loadrunner测试步骤" class="headerlink" title="loadrunner测试步骤"></a>loadrunner测试步骤</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_15.png" alt="LoadRunner_15" title="">
@@ -548,7 +555,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_20</div>
             </figure>
-<figure class="image-bubble">
+<h1 id="VuGen"><a href="#VuGen" class="headerlink" title="VuGen"></a>VuGen</h1><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_21.png" alt="LoadRunner_21" title="">
@@ -583,14 +590,14 @@
                 </div>
                 <div class="image-caption">LoadRunner_25</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="脚本开发过程"><a href="#脚本开发过程" class="headerlink" title="脚本开发过程"></a>脚本开发过程</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_26.png" alt="LoadRunner_26" title="">
                 </div>
                 <div class="image-caption">LoadRunner_26</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="新建脚本"><a href="#新建脚本" class="headerlink" title="新建脚本"></a>新建脚本</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_27.png" alt="LoadRunner_27" title="">
@@ -604,7 +611,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_28</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="如何选择协议"><a href="#如何选择协议" class="headerlink" title="如何选择协议"></a>如何选择协议</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_29.png" alt="LoadRunner_29" title="">
@@ -618,7 +625,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_30</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="录制原理"><a href="#录制原理" class="headerlink" title="录制原理"></a>录制原理</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_31.png" alt="LoadRunner_31" title="">
@@ -632,14 +639,15 @@
                 </div>
                 <div class="image-caption">LoadRunner_32</div>
             </figure>
-<figure class="image-bubble">
+
+<h2 id="脚本录制"><a href="#脚本录制" class="headerlink" title="脚本录制"></a>脚本录制</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_33.png" alt="LoadRunner_33" title="">
                 </div>
                 <div class="image-caption">LoadRunner_33</div>
             </figure>
-<figure class="image-bubble">
+<h3 id="录制选项"><a href="#录制选项" class="headerlink" title="录制选项"></a>录制选项</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_34.png" alt="LoadRunner_34" title="">
@@ -688,14 +696,20 @@
                 </div>
                 <div class="image-caption">LoadRunner_40</div>
             </figure>
-<figure class="image-bubble">
+<h3 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_41.png" alt="LoadRunner_41" title="">
                 </div>
                 <div class="image-caption">LoadRunner_41</div>
             </figure>
-<figure class="image-bubble">
+
+<blockquote>
+<ul>
+<li>录制完成后的查看录制结果中（在最下面），可以更改录制后的地址信息，更改后在重构</li>
+</ul>
+</blockquote>
+<h3 id="代理录制"><a href="#代理录制" class="headerlink" title="代理录制"></a>代理录制</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_42.png" alt="LoadRunner_42" title="">
@@ -716,7 +730,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_44</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="回放脚本"><a href="#回放脚本" class="headerlink" title="回放脚本"></a>回放脚本</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_45.png" alt="LoadRunner_45" title="">
@@ -730,7 +744,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_46</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="运行时设置"><a href="#运行时设置" class="headerlink" title="运行时设置"></a>运行时设置</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_47.png" alt="LoadRunner_47" title="">
@@ -744,14 +758,14 @@
                 </div>
                 <div class="image-caption">LoadRunner_48</div>
             </figure>
-<figure class="image-bubble">
+<h3 id="迭代次数"><a href="#迭代次数" class="headerlink" title="迭代次数"></a>迭代次数</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_49.png" alt="LoadRunner_49" title="">
                 </div>
                 <div class="image-caption">LoadRunner_49</div>
             </figure>
-<figure class="image-bubble">
+<h3 id="时间间隔"><a href="#时间间隔" class="headerlink" title="时间间隔"></a>时间间隔</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_50.png" alt="LoadRunner_50" title="">
@@ -765,7 +779,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_51</div>
             </figure>
-<figure class="image-bubble">
+<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_52.png" alt="LoadRunner_52" title="">
@@ -779,7 +793,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_53</div>
             </figure>
-<figure class="image-bubble">
+<h3 id="思考时间"><a href="#思考时间" class="headerlink" title="思考时间"></a>思考时间</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_54.png" alt="LoadRunner_54" title="">
@@ -793,7 +807,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_55</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="回放选项"><a href="#回放选项" class="headerlink" title="回放选项"></a>回放选项</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_56.png" alt="LoadRunner_56" title="">
@@ -814,7 +828,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_58</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="思考时间-1"><a href="#思考时间-1" class="headerlink" title="思考时间"></a>思考时间</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_59.png" alt="LoadRunner_59" title="">
@@ -835,7 +849,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_61</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="检查点"><a href="#检查点" class="headerlink" title="检查点"></a>检查点</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_62.png" alt="LoadRunner_62" title="">
@@ -863,6 +877,13 @@
                 </div>
                 <div class="image-caption">LoadRunner_65</div>
             </figure>
+<blockquote>
+<ul>
+<li>检查点函数时注册型 函数 一定要将函数放在 请求的前面</li>
+<li>检查点查找的服务器返回的信息</li>
+<li>web add header 是添加表头信息的东西，算在之后好一点</li>
+</ul>
+</blockquote>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -1080,7 +1101,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_96</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="集合点"><a href="#集合点" class="headerlink" title="集合点"></a>集合点</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_97.png" alt="LoadRunner_97" title="">
@@ -1101,7 +1122,7 @@
                 </div>
                 <div class="image-caption">LoadRunner_99</div>
             </figure>
-<figure class="image-bubble">
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="03LoadRunner_100.png" alt="LoadRunner_100" title="">
@@ -1901,7 +1922,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-10-24T01:28:53.171Z" itemprop="dateUpdated">2022-10-24 09:28:53</time>
+    Last updated: <time datetime="2022-10-24T09:57:07.693Z" itemprop="dateUpdated">2022-10-24 17:57:07</time>
 </span><br>
 
 
