@@ -203,10 +203,10 @@
   
   <entry>
     <title>软件测试导图</title>
-    <link href="http://example.com/2022/10/18/map/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    <id>http://example.com/2022/10/18/map/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</id>
+    <link href="http://example.com/2022/10/18/map/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95_map/"/>
+    <id>http://example.com/2022/10/18/map/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95_map/</id>
     <published>2022-10-18T03:01:48.000Z</published>
-    <updated>2022-10-18T23:33:55.285Z</updated>
+    <updated>2022-10-25T11:20:53.656Z</updated>
     
     <content type="html"><![CDATA[<div class="markmap-container" style="height:undefined">  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;软件测试&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;性能测试&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;2022年10月9日拉练题目，基本流程&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;2022年10月10日题目内容复习&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;编写测试用例&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;编写测试用例的套路 写到资产分类 2022年10月14日&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;单元测试&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;junit 和 eclipse的常规使用 2022年10月12日&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[14,15]},&quot;v&quot;:&quot;junit的异常超时测试，几种注解理解，assert方法&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[15,16]},&quot;v&quot;:&quot;测试数据的几种覆盖方法  2022年10月13日&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[17,18]},&quot;v&quot;:&quot;环境搭建&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[19,20]},&quot;v&quot;:&quot;mysql5.7的安装 2022年10月12日&quot;}]}]}"></svg></div>]]></content>
     
