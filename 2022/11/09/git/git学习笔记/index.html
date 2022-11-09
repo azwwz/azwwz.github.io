@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>git学习笔记 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="git">
+    <meta name="description" content="git的常用命令   命令名称 作用    git config –global user.name 用户名 设置用户签名   git config –global user.email 邮箱 设置用户签名   git init 初始化本地库   git status 查看本地库状态   git add 文件名 添加到暂存区   git commit -m “日志信息” 文件名 提交到本地库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git学习笔记">
+<meta property="og:url" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="git的常用命令   命令名称 作用    git config –global user.name 用户名 设置用户签名   git config –global user.email 邮箱 设置用户签名   git init 初始化本地库   git status 查看本地库状态   git add 文件名 添加到暂存区   git commit -m “日志信息” 文件名 提交到本地库">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/wps1.png">
+<meta property="og:image" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/wps2.png">
+<meta property="og:image" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/wps3.png">
+<meta property="og:image" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/wps4.png">
+<meta property="og:image" content="http://example.com/wps5.png">
+<meta property="og:image" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/wps6.png">
+<meta property="article:published_time" content="2022-11-09T02:47:08.000Z">
+<meta property="article:modified_time" content="2022-11-09T08:42:29.286Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/wps1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">John Doe</h5>
+          <a href="mailto:19704769@qq.com" title="19704769@qq.com" class="mail">19704769@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">git学习笔记</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">git学习笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-11-09T02:47:08.000Z" itemprop="datePublished" class="page-time">
+  2022-11-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/git/">git</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="post-toc-number">1.</span> <span class="post-toc-text">git的常用命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%AD%BE%E5%90%8D"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">设置用户签名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">初始化本地库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%BA%93%E7%BB%93%E6%9E%9C"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">查看本地库结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">添加暂存区</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">提交到本地库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%EF%BC%88hello-txt%EF%BC%89"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">修改文件（hello.txt）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">历史版本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%89%88%E6%9C%AC%E7%A9%BF%E6%A2%AD"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">版本穿梭</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C"><span class="post-toc-number">2.</span> <span class="post-toc-text">Git分支操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E6%94%AF"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">什么是分支</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">分支的好处</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">分支的操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E5%92%8C%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E5%9B%BE%E8%A7%A3"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">创建分支和切换分支图解</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-git/git学习笔记"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">git学习笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-11-09 10:47:08" datetime="2022-11-09T02:47:08.000Z"  itemprop="datePublished">2022-11-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/git/">git</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="git的常用命令"><a href="#git的常用命令" class="headerlink" title="git的常用命令"></a>git的常用命令</h2><table>
+<thead>
+<tr>
+<th><strong>命令名称</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git config –global user.name 用户名</td>
+<td>设置用户签名</td>
+</tr>
+<tr>
+<td>git config –global user.email 邮箱</td>
+<td>设置用户签名</td>
+</tr>
+<tr>
+<td>git init</td>
+<td>初始化本地库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看本地库状态</td>
+</tr>
+<tr>
+<td>git add 文件名</td>
+<td>添加到暂存区</td>
+</tr>
+<tr>
+<td>git commit -m “日志信息” 文件名</td>
+<td>提交到本地库</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>查看历史记录</td>
+</tr>
+<tr>
+<td>git reset –hard 版本号</td>
+<td>版本穿梭</td>
+</tr>
+</tbody></table>
+<h3 id="设置用户签名"><a href="#设置用户签名" class="headerlink" title="设置用户签名"></a>设置用户签名</h3><p>1） 基本语法</p>
+<p>git config –global user.name 用户名</p>
+<p>git config –global user.email 邮箱</p>
+<p>2）实际操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global user.name Layne</span></span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global user.email Layne@atguigu.com</span></span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> ~/.gitconfig</span> </span><br><span class="line">[user]</span><br><span class="line">	name = Layne</span><br><span class="line">	email = Layne@atguigu.com</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>​		签名的作用是区分不同操作者身份。用户的签名信息在每一个版本的提交信息中能够看到，以此确认本次提交是谁做的。<strong>Git 首次安装必须设置一下用户签名，否则无法提交代码。</strong></p>
+<p>​		<strong>※注意</strong>：这里设置用户签名和将来登录 GitHub（或其他代码托管中心）的账号没有任何关系。</p>
+<h3 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><p>1） 基本语法</p>
+<p>git</p>
+<p>2）实际操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git init</span></span><br><span class="line">Initialized empty Git repository in D:/Git-Space/SH0720/.git/</span><br><span class="line"></span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ll -a total 4</span></span><br><span class="line">drwxr-xr-x 1 Layne 197609 0 11 月 25 14:07 ./</span><br><span class="line">drwxr-xr-x 1 Layne 197609 0 11 月 25 14:07 ../</span><br><span class="line">drwxr-xr-x 1 Layne 197609 0 11 月 25 14:07 .git/	（.git 初始化的效果，生成 git）</span><br></pre></td></tr></table></figure>
+
+<p>3）查看结果</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="wps1.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure> 
+
+<h3 id="查看本地库结果"><a href="#查看本地库结果" class="headerlink" title="查看本地库结果"></a>查看本地库结果</h3><ol>
+<li><p>基本语法</p>
+<p>git status</p>
+</li>
+<li><p>实际操作</p>
+<ol>
+<li><p>首次查看</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br><span class="line">On branch master No commits yet</span><br><span class="line">nothing to commit (create/copy files and use &quot;git add&quot; to track)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line">$ vim hello.txt</span><br><span class="line">hello git! </span><br><span class="line">hello git! </span><br><span class="line">hello git! </span><br><span class="line">hello git! </span><br><span class="line">hello git! </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再次查看（检测到未追踪的文件）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">	(use &quot;git add &lt;file&gt;...&quot; to include in what will be committed) </span><br><span class="line">	hello.txt</span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+<h3 id="添加暂存区"><a href="#添加暂存区" class="headerlink" title="添加暂存区"></a>添加暂存区</h3><p>将工作区的文件添加到暂存区</p>
+<ol>
+<li><p>基本语法</p>
+<p>git add 文件名</p>
+</li>
+<li><p>案例操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git add hello.txt</span></span><br><span class="line">warning: LF will be replaced by CRLF in hello.txt.</span><br><span class="line">The  file will have	its original line endings in your	working directory.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看状态（检测到暂存区有新文件）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">	(use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">		new file:	hello.txt</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="提交到本地库"><a href="#提交到本地库" class="headerlink" title="提交到本地库"></a>提交到本地库</h3><p>将暂存区的文件提交到本地库</p>
+<ol>
+<li><p>基本语法</p>
+<p>git commit -m “日志信息” 文件名</p>
+</li>
+<li><p>实际操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit -m <span class="string">&quot;my first commit&quot;</span> hello.txt</span></span><br><span class="line"></span><br><span class="line">warning: LF will be replaced by CRLF in hello.txt.</span><br><span class="line">The  file will have	its original line endings in your	working directory.</span><br><span class="line"></span><br><span class="line">[master (root-commit) 86366fa] my first commit</span><br><span class="line">    1 file changed, 5 insertions(+) </span><br><span class="line">    create mode 100644 hello.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看状态（没有文件需要提交）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>​	</p>
+<h3 id="修改文件（hello-txt）"><a href="#修改文件（hello-txt）" class="headerlink" title="修改文件（hello.txt）"></a>修改文件（hello.txt）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim hello.txt</span></span><br><span class="line">hello git! hello atguigu! 2222222222222 hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>查看状态（检测到工作区有问价被修改）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">    (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">    (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">	modified:	hello.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将修改的文件再次添加到暂存区</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git add hello.txt</span></span><br><span class="line">warning: LF will be replaced by CRLF in hello.txt.</span><br><span class="line">The file will have	its original line endings in your working directory.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看状态（工作区的修改添加到了暂存区）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br><span class="line">On branch  master Changes to be committed:</span><br><span class="line">	(use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">		modified:	hello.txt</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="历史版本"><a href="#历史版本" class="headerlink" title="历史版本"></a>历史版本</h3><ol>
+<li><p>基本语法</p>
+<p>git reflog 查看版本信息</p>
+<p>git log 查看版本详细信息</p>
+</li>
+<li><p>案例实操</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reflog</span></span><br><span class="line">087a1a7 (HEAD -&gt; master) HEAD@&#123;0&#125;: commit: my third commit ca8ded6 HEAD@&#123;1&#125;: commit: my second commit</span><br><span class="line">86366fa HEAD@&#123;2&#125;: commit (initial): my first commit</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="版本穿梭"><a href="#版本穿梭" class="headerlink" title="版本穿梭"></a>版本穿梭</h3><ol>
+<li><p>基本语法</p>
+<p>git reset –hard 版本号</p>
+</li>
+<li><p>案例实操</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">--首先查看当前的历史记录，可以看到当前是在 087a1a7 这个版本</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reflog</span></span><br><span class="line">087a1a7 (HEAD -&gt; master) HEAD@&#123;0&#125;: commit: my third commit ca8ded6 HEAD@&#123;1&#125;: commit: my second commit</span><br><span class="line">86366fa HEAD@&#123;2&#125;: commit (initial): my first commit</span><br><span class="line"></span><br><span class="line">--切换到 86366fa 版本，也就是我们第一次提交的版本</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reset --hard 86366fa</span></span><br><span class="line">HEAD is now at 86366fa my first commit</span><br><span class="line"></span><br><span class="line">--切换完毕之后再查看历史记录，当前成功切换到了 86366fa 版本</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reflog</span></span><br><span class="line">86366fa (HEAD -&gt; master) HEAD@&#123;0&#125;: reset: moving to 86366fa 087a1a7 HEAD@&#123;1&#125;: commit: my third commit</span><br><span class="line">ca8ded6 HEAD@&#123;2&#125;: commit: my second commit</span><br><span class="line">86366fa (HEAD -&gt; master) HEAD@&#123;3&#125;: commit (initial): my first commit</span><br><span class="line"></span><br><span class="line">--然后查看文件 hello.txt，发现文件内容已经变化</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> hello.txt</span></span><br><span class="line">hello git! hello atguigu! </span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu! </span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu! </span><br><span class="line">hello git! hello atguigu! </span><br><span class="line">hello git! hello atguigu!</span><br></pre></td></tr></table></figure>
+
+<p>Git切换版本，底层其实是移动的HEAD指针，具体原理如下图所示。</p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="wps2.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h2 id="Git分支操作"><a href="#Git分支操作" class="headerlink" title="Git分支操作"></a>Git分支操作</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="wps3.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure> 
+
+<h3 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h3><p>在主线中开出一个分线，用来梳理自己的分支</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="wps4.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h3 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h3><p>​	并行推进多个功能的开发</p>
+<p>​	其他分支的问题，不会影响另外的分支。失败的分支删除重来就好</p>
+<h3 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h3><table>
+<thead>
+<tr>
+<th><strong>命令名称</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch 分支名</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout 分支名</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge 分支名</td>
+<td>把指定的分支合并到当前分支上</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>查看分支</p>
+<ol>
+<li><p>基本语法</p>
+<p>git branch -v</p>
+</li>
+<li><p>案例实操</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch -v</span></span><br><span class="line">* master 087a1a7 my third commit（*代表当前所在的分区）</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>创建分支</p>
+<ol>
+<li><p>基本语法</p>
+<p>git branch 分支名</p>
+</li>
+<li><p>案例实操</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">	git branch hot-fix</span></span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch -v</span></span><br><span class="line">hot-fix 087a1a7 my third commit	（刚创建的新的分支，并将主分支 master的内容复制了一份）</span><br><span class="line">* master	087a1a7 my third commit</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>修改分支</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">--在 master 分支上做修改</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim hello.txt</span></span><br><span class="line">--添加暂存区</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git add hello.txt</span></span><br><span class="line">--提交本地库</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit -m <span class="string">&quot;my forth commit&quot;</span> hello.txt</span></span><br><span class="line">[master f363b4c] my forth commit</span><br><span class="line">1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line">--查看分支</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch -v</span></span><br><span class="line">hot-fix 087a1a7 my third commit	（hot-fix 分支并未做任何改变）</span><br><span class="line">* master f363b4c my forth commit （当前 master 分支已更新为最新一次提交的版本）</span><br><span class="line"></span><br><span class="line">--查看 master 分支上的文件内容</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> hello.txt</span></span><br><span class="line">hello git! hello atguigu! 2222222222222 </span><br><span class="line">hello git! hello atguigu! 3333333333333 </span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu! master test</span><br><span class="line">hello git! hello atguigu!</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>切换分支</p>
+<ol>
+<li><p>基本语法</p>
+<p>git checkout 分支名</p>
+</li>
+<li><p>案例实操</p>
+</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line">$ git checkout hot-fix</span><br><span class="line">Switched to branch &#x27;hot-fix&#x27;</span><br><span class="line">--发现当先分支已由 master 改为 hot-fix</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (hot-fix)</span><br><span class="line">$</span><br><span class="line">--查看 hot-fix 分支上的文件内容发现与 master 分支上的内容不同</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (hot-fix)</span><br><span class="line">$ cat hello.txt</span><br><span class="line">hello git! hello atguigu! 2222222222222 </span><br><span class="line">hello git! hello atguigu! 3333333333333 </span><br><span class="line">hello git! hello atguigu!</span><br><span class="line">hello git! hello atguigu! </span><br><span class="line">hello git! hello atguigu!</span><br><span class="line"></span><br><span class="line">--在 hot-fix 分支上做修改</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (hot-fix)</span><br><span class="line">$ cat hello.txt</span><br><span class="line">hello git! hello atguigu! 2222222222222</span><br><span class="line">hello git! hello atguigu! 3333333333333 </span><br><span class="line">hello git! hello atguigu!  hot-fix test</span><br><span class="line">hello git! hello atguigu! </span><br><span class="line">hello git! hello atguigu! </span><br><span class="line"></span><br><span class="line">--添加暂存区</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (hot-fix)</span><br><span class="line">$ git add hello.txt</span><br><span class="line">--提交本地库</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (hot-fix)</span><br><span class="line">$ git commit -m &quot;hot-fix commit&quot; hello.txt</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>合并分支</p>
+<ol>
+<li><p>基本语法</p>
+<p>git merge 分支名</p>
+</li>
+<li><p>案例实操 （在master分支上合并hot-fix分支）</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git merge hot-fix</span></span><br><span class="line">Auto-merging hello.txt</span><br><span class="line">CONFLICT (content): Merge conflict in hello.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>产生冲突</p>
+</li>
+</ol>
+<p>​	冲突后的表现：后面状态为 MERGING</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master|MERGING)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span>	hello.txt</span></span><br><span class="line">hello	git!	hello	atguigu!	2222222222222</span><br><span class="line">hello	git!	hello	atguigu!	3333333333333</span><br><span class="line">hello	git!	hello	atguigu!	</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">hello	git!	hello	atguigu!</span><br><span class="line">hello	git!	hello	atguigu!	master test </span><br><span class="line">=======</span><br><span class="line">hello	git!	hello	atguigu!	hot-fix test</span><br><span class="line">hello	git!	hello	atguigu!</span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">&gt;&gt;&gt;&gt;&gt;&gt; hot-fix</span></span><br></pre></td></tr></table></figure>
+
+<p>冲突产生的原因</p>
+<p>​	合并分支时，两个分支在同一个文件的同一个位置有两套完全不同的修改。git无法替代我们决定使用哪一个。必须认为决定新代码内容</p>
+<p>查看状态（检测到有文件有两处修改）<br>   <img src="/wps5.png" alt="img"></p>
+<ol start="7">
+<li><p>解决冲突</p>
+<ol>
+<li><p>编辑有冲突的文件,删除特殊符号，决定要使用的内容</p>
+<p>特殊符号：&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD  </p>
+<p>当前分支的代码 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;	</p>
+<p>合并过来的代码	&gt;&gt;&gt;&gt;&gt;&gt;&gt; hot-fix</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hello	git!	hello	atguigu!	2222222222222</span><br><span class="line">hello	git!	hello	atguigu!	3333333333333</span><br><span class="line">hello	git!	hello	atguigu!	</span><br><span class="line">hello	git!	hello	atguigu!	hot-fix test</span><br><span class="line">hello	git!	hello	atguigu!	master test </span><br><span class="line">hello	git!	hello	atguigu!</span><br><span class="line">hello	git!	hello	atguigu!</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加到暂存区</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master|MERGING)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git add hello.txt</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行提交（注意：此时使用git commit 命令时<strong>不能带文件名</strong>）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master|MERGING)</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit -m <span class="string">&quot;merge hot-fix&quot;</span></span></span><br><span class="line">[master 69ff88d] merge hot-fix</span><br><span class="line">--发现后面 MERGING 消失，变为正常</span><br><span class="line">Layne@LAPTOP-Layne MINGW64 /d/Git-Space/SH0720 (master)</span><br><span class="line"><span class="meta prompt_">$</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="创建分支和切换分支图解"><a href="#创建分支和切换分支图解" class="headerlink" title="创建分支和切换分支图解"></a>创建分支和切换分支图解</h3></li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="wps6.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>​		master、hot-fix 其实都是指向具体版本记录的指针。当前所在的分支，其实是由 HEAD</p>
+<p>决定的。所以创建分支的本质就是多创建一个指针。</p>
+<p>​		HEAD 如果指向 master，那么我们现在就在master 分支上。</p>
+<p>​		HEAD 如果执行 hotfix，那么我们现在就在hotfix 分支上。</p>
+<p>​		所以切换分支的本质就是移动HEAD指针</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2022-11-09T08:42:29.286Z" itemprop="dateUpdated">2022-11-09 16:42:29</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://example.com">
+            <img src="/img/avatar.jpg" alt="John Doe">
+            John Doe
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=《git学习笔记》 — Hexo&pic=http://example.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=《git学习笔记》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git学习笔记》 — Hexo&url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&via=http://example.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2022/11/07/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">环境搭建</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>John Doe &copy; 2015 - 2022</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=《git学习笔记》 — Hexo&pic=http://example.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=《git学习笔记》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git学习笔记》 — Hexo&url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&via=http://example.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://example.com/2022/11/09/git/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
