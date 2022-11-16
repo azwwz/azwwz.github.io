@@ -29,7 +29,7 @@
 <meta property="og:description" content="配置java 1234567tar zxvf jdk--mv jdk1--- jdkvi &#x2F;etc&#x2F;profileexport PATH&#x3D;$PATH:&#x2F;wz&#x2F;jdk&#x2F;bin:wqsource &#x2F;etc&#x2F;profilejava -version  安装 mysql 1234567891011121314151617181920tar zxvf mysql--mv mysql-- mysqlln -s">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-07T11:56:30.000Z">
-<meta property="article:modified_time" content="2022-11-07T17:25:43.848Z">
+<meta property="article:modified_time" content="2022-11-15T11:42:55.350Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="软件测试">
 <meta property="article:tag" content="环境搭建">
@@ -172,6 +172,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mysql5-6%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="post-toc-number">1.</span> <span class="post-toc-text">mysql5.6的搭建</span></a></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-软件测试/环境搭建"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -205,6 +212,16 @@
 <p>配置 tomcat</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf apa**</span><br><span class="line">cd apa--</span><br><span class="line">./bin/startup.sh</span><br><span class="line">cd web--</span><br><span class="line">cp /opt/person.war ./</span><br></pre></td></tr></table></figure>
 
+<h2 id="mysql5-6的搭建"><a href="#mysql5-6的搭建" class="headerlink" title="mysql5.6的搭建"></a>mysql5.6的搭建</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">解压</span><br><span class="line">tar zxvf </span><br><span class="line">更名</span><br><span class="line">mv mysql mysql</span><br><span class="line">更改文件权限</span><br><span class="line">groupadd mysql</span><br><span class="line">useradd -g mysql mysql</span><br><span class="line">cd mysql</span><br><span class="line">chown -R mysql:mysql .</span><br><span class="line">拷贝一个文件</span><br><span class="line">cp ./support-file/my-default.cnf /etc/my.cnf</span><br><span class="line">初始化</span><br><span class="line">./scripts/mysql_install_db --user=mysql</span><br><span class="line">设置mysql目录</span><br><span class="line">vi ./support-file/mysql.server</span><br><span class="line">修改两行代码</span><br><span class="line">basedir=/opt/mysql</span><br><span class="line">datadir=/opt/mysql/data</span><br><span class="line">:wq保存</span><br><span class="line">启动服务文件</span><br><span class="line">./support-file/mysql.server</span><br><span class="line">关于修改登录的相关命令</span><br><span class="line">./bin/mysqladmin -u root password 回车</span><br><span class="line">或者</span><br><span class="line">./bin/mysqldamin -u root -h localhost.localdomain password &#x27;123456&#x27;</span><br><span class="line">或者</span><br><span class="line">update set password = password(&quot;123456&quot;) where user=mysql;</span><br><span class="line">flush privileges;</span><br><span class="line">给任何访问数据库的授予权限</span><br><span class="line">grant all privileges on . to root@&quot;%&quot; identified by &quot;123456&quot;;</span><br><span class="line">flush privileges;</span><br><span class="line">之后重启服务器</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhouerba/p/7380504.html">https://www.cnblogs.com/zhouerba/p/7380504.html</a></p>
+<p>还有一种配置的方式，是</p>
+<p>在初始化后chown -R root .</p>
+<p>chown -R mysql data</p>
+<p>然后再my.cnf 中只更改basedir（虽然我觉得这也是没有必要的） </p>
+<p>datadir 使用默认的了</p>
+</blockquote>
 
         </div>
 
@@ -213,7 +230,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-11-07T17:25:43.848Z" itemprop="dateUpdated">2022-11-08 01:25:43</time>
+    Last updated: <time datetime="2022-11-15T11:42:55.350Z" itemprop="dateUpdated">2022-11-15 19:42:55</time>
 </span><br>
 
 
